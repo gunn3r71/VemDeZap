@@ -9,6 +9,7 @@ namespace VemDeZap.Domain.Commands.Usuario
     {
         public async Task<Response> Handle(AdicionarUsuarioCommand request, CancellationToken cancellationToken)
         {
+
             throw new System.NotImplementedException();
         }
     }
