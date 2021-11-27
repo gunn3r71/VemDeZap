@@ -1,5 +1,6 @@
 ﻿using System;
 using VemDeZap.Domain.Entities.Base;
+using VemDeZap.Domain.Enums;
 using VemDeZap.Domain.ValueObjects;
 
 namespace VemDeZap.Domain.Entities
@@ -8,7 +9,7 @@ namespace VemDeZap.Domain.Entities
     {
         public Contato(string nome,
             Telefone telefone,
-            int nicho, 
+            EnumNicho nicho, 
             Guid usuarioId)
         {
             Nome = nome;
@@ -19,7 +20,7 @@ namespace VemDeZap.Domain.Entities
 
         public string Nome { get; private set; }
         public Telefone Telefone { get; private set; }
-        public int Nicho { get; private set; }
+        public EnumNicho Nicho { get; private set; }
         public Guid UsuarioId { get; private set; }
         public Usuario Usuario { get; private set; }
     }

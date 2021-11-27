@@ -1,12 +1,13 @@
 ﻿using System;
 using VemDeZap.Domain.Entities.Base;
+using VemDeZap.Domain.Enums;
 
 namespace VemDeZap.Domain.Entities
 {
     public class Grupo : Entity
     {
-        public Grupo(string nome, 
-            int nicho,
+        public Grupo(string nome,
+            EnumNicho nicho,
             Guid usuarioId)
         {
             Nome = nome;
@@ -15,7 +16,7 @@ namespace VemDeZap.Domain.Entities
         }
 
         public string Nome { get; private set; }
-        public int Nicho { get; private set; }
+        public EnumNicho Nicho { get; private set; }
         public Guid UsuarioId { get; private set; }
         public Usuario Usuario { get; private set; }
     }
