@@ -1,12 +1,13 @@
-﻿using VemDeZap.Domain.Entities.Base;
+﻿using MediatR;
 using VemDeZap.Domain.ValueObjects;
 
-namespace VemDeZap.Domain.Entities
+namespace VemDeZap.Domain.Commands.Usuario
 {
-    public class Usuario : Entity
+    public class AdicionarUsuarioCommand
+        : IRequest<Response>
     {
-        public Usuario(Nome nome,
-            Email email,
+        public AdicionarUsuarioCommand(Nome nome,
+            Email email, 
             string senha)
         {
             Nome = nome;
